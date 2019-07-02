@@ -1,0 +1,178 @@
+#ifndef BOARD_H
+#define BOARD_H
+
+#include <QWidget>
+#include <QPainter>
+#include <QBrush>
+#include <QImage>
+#include <QRect>
+
+#include "game.h"
+
+class Board : public QWidget
+{
+    Q_OBJECT
+    Game* game;
+    int SizeRect;
+    QPainter* painter;
+public:
+    explicit Board(Game game,QWidget *parent = nullptr);
+
+signals:
+
+public slots:
+};
+
+#endif // BOARD_H
+
+/*
+
+void BoardGUI::paintEvent(QPaintEvent *event){
+    QPainter painter(this);
+
+    for (int i = 0; i < image.height(); ++i)
+    {
+        for (int j = 0; j < image.width(); ++j)
+        {
+            if(i%2==0)
+            {
+                if(j%2 != 0)
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c1")));
+                else
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c2")));
+
+            }
+
+            else{
+                if(j%2 == 0)
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c1")));
+                else
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c2")));
+            }
+        }
+    }
+ça c'est pour dessiner le fond des carrés
+image c'est un attribut de type QImage
+et ça se trouve dans una classe a part pour le board, qui herite de QWidget
+une*
+for (int i = 0; i < image.height(); ++i)
+    {
+        for (int j = 0; j < image.width(); ++j)
+        {
+            QRect rect = pixelRect(j, i);
+            if (!event->region().intersected(rect).isEmpty())
+            {
+
+                if(myGame.getBoard().getPieceAt(i,j).getColor() == Color::YELLOW)
+                {
+                    if(myGame.getBoard().getPieceAt(i,j).getHoldingBall())
+                        painter.fillRect(rect,QBrush(QImage("ressources/yellowBall")));
+                    else
+                        painter.fillRect(rect,QBrush(QImage("ressources/yellow")));
+                }
+                if(myGame.getBoard().getPieceAt(i,j).getColor() == Color::RED)
+                {
+                    if(myGame.getBoard().getPieceAt(i,j).getHoldingBall())
+                        painter.fillRect(rect,QBrush(QImage("ressources/redBall")));
+                    else
+                        painter.fillRect(rect,QBrush(QImage("ressources/red")));
+                }
+            }
+        }
+    }
+
+
+}
+
+QRect BoardGUI::pixelRect(int i, int j) const
+{
+    return QRect(sizeCase * i + 1, sizeCase * j + 1, sizeCase - 1, sizeCase - 1);
+}
+et ça cest pour les pieces
+BoardGUI::BoardGUI(Game &aGame, QWidget *parent) :
+    QWidget(parent),myGame(aGame),sizeCase(80)
+
+{
+    image = QImage(myGame.getBoard().getWidth(), myGame.getBoard().getHeight(), QImage::Format_ARGB32);
+    myGame.attach(this);
+    setMouseTracking(true);
+}
+
+void BoardGUI::paintEvent(QPaintEvent *event){
+    QPainter painter(this);
+
+    for (int i = 0; i < image.height(); ++i)
+    {
+        for (int j = 0; j < image.width(); ++j)
+        {
+            if(i%2==0)
+            {
+                if(j%2 != 0)
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c1")));
+                else
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c2")));
+
+            }
+
+            else{
+                if(j%2 == 0)
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c1")));
+                else
+                    painter.fillRect(QRect(pixelRect(j,i)),QBrush(QImage
+                                                                  ("ressources/c2")));
+            }
+        }
+    }
+
+
+    Drow line
+    for (int i = 0; i <= image.height(); ++i)
+        painter.drawLine(sizeCase * i, 0,sizeCase * i, sizeCase * image.height());
+    for (int j = 0; j <= image.width(); ++j)
+        painter.drawLine(0, sizeCase * j,sizeCase * image.width(), sizeCase * j);
+
+
+
+    Draw Case
+    for (int i = 0; i < image.height(); ++i)
+    {
+        for (int j = 0; j < image.width(); ++j)
+        {
+            QRect rect = pixelRect(j, i);
+            if (!event->region().intersected(rect).isEmpty())
+            {
+
+                if(myGame.getBoard().getPieceAt(i,j).getColor() == Color::YELLOW)
+                {
+                    if(myGame.getBoard().getPieceAt(i,j).getHoldingBall())
+                        painter.fillRect(rect,QBrush(QImage("ressources/yellowBall")));
+                    else
+                        painter.fillRect(rect,QBrush(QImage("ressources/yellow")));
+                }
+                if(myGame.getBoard().getPieceAt(i,j).getColor() == Color::RED)
+                {
+                    if(myGame.getBoard().getPieceAt(i,j).getHoldingBall())
+                        painter.fillRect(rect,QBrush(QImage("ressources/redBall")));
+                    else
+                        painter.fillRect(rect,QBrush(QImage("ressources/red")));
+                }
+            }
+        }
+    }
+
+
+}
+
+QRect BoardGUI::pixelRect(int i, int j) const
+{
+    return QRect(sizeCase * i + 1, sizeCase * j + 1, sizeCase - 1, sizeCase - 1);
+}
+
+*/
