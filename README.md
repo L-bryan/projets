@@ -36,3 +36,12 @@ Reprise du jeu de société Diabalik
 #### Type **client seul**
 #### But 
 Application de "Rencontre" sur base de la théorie des graphes
+
+## eyetracking
+
+### Descriptif
+
+#### Application **C++**
+#### Type **client seul**
+#### But 
+Déplacer le curseur de la souris à l'aide d'un son oeuil et une webcam, à l'aide d'OpenCV

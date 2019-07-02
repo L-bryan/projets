@@ -1,0 +1,10 @@
+#+TITLE: Ressources
+
+https://github.com/trishume/eyeLike/tree/master/src
+https://picoledelimao.github.io/blog/2017/01/28/eyeball-tracking-for-mouse-control-in-opencv/
+https://hackaday.com/2012/05/30/opencv-knows-where-youre-looking-with-eye-tracking/
+
+Smooth face tracking:
+http://synaptitude.me/blog/smooth-face-tracking-using-opencv/
+
+Ca peut être intéressant de chercher une solution pour que ça fonctionne à contre jour
