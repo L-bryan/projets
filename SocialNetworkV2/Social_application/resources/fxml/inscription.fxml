@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="353.0" layoutY="14.0" text="Inscription">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="inscription" layoutX="588.0" layoutY="500.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="133.0" text="S'INSCRIRE" />
+      <Button fx:id="back" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="82.0">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/go-back-left-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane alignment="CENTER" layoutX="24.0" layoutY="86.0" prefHeight="394.0" prefWidth="742.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Nom" />
+            <Label text="Prénom" GridPane.rowIndex="1" />
+            <Label text="Date de naissance" GridPane.rowIndex="2" />
+            <Label text="Sexe" GridPane.rowIndex="3" />
+            <TextField fx:id="name" prefHeight="27.0" prefWidth="106.0" promptText="Obligatoire" GridPane.columnIndex="1" />
+            <TextField fx:id="firstname" promptText="Obligatoire" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="birthdate" promptText="Obligatoire" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="134.0" text="   Numéro de téléphone" GridPane.columnIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label text="   E-mail" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="mobile" promptText="Facultatif" GridPane.columnIndex="3" />
+            <TextField fx:id="email" promptText="Facultatif" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="   Préférences" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="54.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="89.0" text="Distance">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <TextField fx:id="dstFriend" prefHeight="27.0" prefWidth="46.0" promptText="Facultatif" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="89.0" text="Age minimal" />
+                              <TextField fx:id="ageMin" prefHeight="27.0" prefWidth="45.0" promptText="Facultatif" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="89.0" text="Age maximal" />
+                              <TextField fx:id="ageMax" prefHeight="27.0" prefWidth="45.0" promptText="Facultatif" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="64.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="89.0" text="Sexe" />
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ComboBox fx:id="sexeP" prefWidth="150.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ComboBox fx:id="sexe" prefWidth="150.0" promptText="sexe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

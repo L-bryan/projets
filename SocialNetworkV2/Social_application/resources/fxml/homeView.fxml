@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import be.he2b.components.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="matchs" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" text="Matchs">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/favorite-heart-button.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="friends" layoutX="346.0" layoutY="27.0" mnemonicParsing="false" text="Friends">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user-shape.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="addfriend" layoutX="687.0" layoutY="10.0" mnemonicParsing="false" text="Add">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user-shape.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Line endX="800.0" layoutX="2.0" layoutY="105.0" />
+      <CarouselControl fx:id="carousel" layoutX="78.0" layoutY="150.0" />
+      <TextField fx:id="textaddfriend" layoutX="686.0" layoutY="69.0" prefHeight="27.0" prefWidth="87.0" promptText="ID : 500" />
+   </children>
+</AnchorPane>

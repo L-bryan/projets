@@ -1,0 +1,8 @@
+<<<<<<< OURS
+/Social_components/build/
+/Social_components/dist/
+=======
+/nbproject/private/
+/build/
+/dist/
+>>>>>>> THEIRS
